@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Dropdown from './components/Dropdown';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <Dropdown title="My Dropdown">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
+          sapiente odio quod itaque praesentium officia tempora, cupiditate
+          voluptates quam, dolor temporibus deleniti! Impedit tenetur mollitia
+          neque labore, nulla excepturi minima!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </Dropdown>
+    </>
   );
 }
 
