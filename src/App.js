@@ -1,26 +1,22 @@
 import Dropdown from './components/Dropdown';
+import Form from './components/Form';
+
+import { Container } from './App.styled';
 
 function App() {
   return (
-    <>
-      <Dropdown title="My Dropdown 1">
+    <Container>
+      <Dropdown title="How to do Login?">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-          sapiente odio quod itaque praesentium officia tempora, cupiditate
-          voluptates quam, dolor temporibus deleniti! Impedit tenetur mollitia
-          neque labore, nulla excepturi minima!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          repellendus ab optio a! Rerum, recusandae voluptatum! Dolores alias
+          aliquam sint rem, ullam exercitationem perspiciatis, amet consequuntur
+          asperiores aperiam ab soluta.
         </p>
       </Dropdown>
 
-      <Dropdown title="My Dropdown 2">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-          sapiente odio quod itaque praesentium officia tempora, cupiditate
-          voluptates quam, dolor temporibus deleniti! Impedit tenetur mollitia
-          neque labore, nulla excepturi minima!
-        </p>
-      </Dropdown>
-    </>
+      <Form />
+    </Container>
   );
 }
 
