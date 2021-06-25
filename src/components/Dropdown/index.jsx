@@ -1,19 +1,35 @@
 import useToggle from './../../hooks/useToggle';
 
+import {
+  DropdownContainer,
+  DropdownHeader,
+  DropdownHeaderTitle,
+  DropdownHeaderButton,
+  DropdownContentContainer,
+} from './styled';
+
 const Dropdown = ({ title, children }) => {
   const [opened, toggleOpened] = useToggle();
 
   return (
-    <div aria-label="dropdown">
-      <header>
-        <h2 aria-label="dropdown-title">{title}</h2>
-        <button data-testid="toggle" onClick={toggleOpened}>
+    <DropdownContainer aria-label="dropdown">
+      <DropdownHeader>
+        <DropdownHeaderTitle aria-label="dropdown-title">
+          {title}
+        </DropdownHeaderTitle>
+        <DropdownHeaderButton
+          type="button"
+          data-testid="toggle"
+          onClick={toggleOpened}
+        >
           {opened ? '-' : '+'}
-        </button>
-      </header>
+        </DropdownHeaderButton>
+      </DropdownHeader>
 
-      {opened && <div aria-label="dropdown-content">{children}</div>}
-    </div>
+      <DropdownContentContainer aria-hidden={opened} isOpened={opened}>
+        {children}
+      </DropdownContentContainer>
+    </DropdownContainer>
   );
 };
 
