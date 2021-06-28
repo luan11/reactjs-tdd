@@ -11,7 +11,7 @@ import {
   FormInput,
   FormButton,
   FormErrorMessage,
-} from './styled';
+} from './styles';
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);

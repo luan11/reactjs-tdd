@@ -8,7 +8,7 @@ import {
   DropdownHeaderTitle,
   DropdownHeaderButton,
   DropdownContentContainer,
-} from './styled';
+} from './styles';
 
 const Dropdown = ({ title, children }) => {
   const [opened, toggleOpened] = useToggle();
