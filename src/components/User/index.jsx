@@ -1,8 +1,9 @@
+import React from 'react';
 import P from 'prop-types';
 
 import { Container, ID, Name, Username, Email } from './styles';
 
-const User = ({ id, name, username, email }) => {
+const User = React.memo(({ id, name, username, email }) => {
   return (
     <Container aria-label="user">
       <ID aria-label="user-id">{id}</ID>
@@ -13,7 +14,7 @@ const User = ({ id, name, username, email }) => {
       </Email>
     </Container>
   );
-};
+});
 
 User.propTypes = {
   id: P.number.isRequired,

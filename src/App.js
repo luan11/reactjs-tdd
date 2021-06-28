@@ -1,11 +1,18 @@
+import React from 'react';
+
+import useToggle from './hooks/useToggle';
+
 import Dropdown from './components/Dropdown';
 import Form from './components/Form';
-import Users from './components/Users';
 import ErrorBoundary from './components/ErrorBoundary';
 
-import { Container } from './App.styles';
+import { Container, Button } from './App.styles';
+
+const Users = React.lazy(() => import('./components/Users'));
 
 function App() {
+  const [loadUsers, toggleLoadUsers] = useToggle();
+
   return (
     <Container>
       <Dropdown title="How to do Login?">
@@ -19,9 +26,17 @@ function App() {
 
       <Form />
 
-      <ErrorBoundary>
-        <Users />
-      </ErrorBoundary>
+      <Button type="button" onClick={() => toggleLoadUsers()}>
+        {loadUsers ? 'Unload' : 'Load'} users
+      </Button>
+
+      {loadUsers && (
+        <React.Suspense fallback={<p>Loading...</p>}>
+          <ErrorBoundary>
+            <Users />
+          </ErrorBoundary>
+        </React.Suspense>
+      )}
     </Container>
   );
 }
