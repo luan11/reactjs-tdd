@@ -45,7 +45,7 @@ const Users = () => {
           ))}
         </div>
       ) : (
-        <p>No users found...</p>
+        !loading && <p>No users found...</p>
       )}
     </div>
   );
