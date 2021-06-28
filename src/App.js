@@ -1,5 +1,6 @@
 import Dropdown from './components/Dropdown';
 import Form from './components/Form';
+import Users from './components/Users';
 
 import { Container } from './App.styles';
 
@@ -16,6 +17,8 @@ function App() {
       </Dropdown>
 
       <Form />
+
+      <Users />
     </Container>
   );
 }
