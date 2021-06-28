@@ -1,6 +1,7 @@
 import Dropdown from './components/Dropdown';
 import Form from './components/Form';
 import Users from './components/Users';
+import ErrorBoundary from './components/ErrorBoundary';
 
 import { Container } from './App.styles';
 
@@ -18,7 +19,9 @@ function App() {
 
       <Form />
 
-      <Users />
+      <ErrorBoundary>
+        <Users />
+      </ErrorBoundary>
     </Container>
   );
 }
