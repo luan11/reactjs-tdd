@@ -4,7 +4,7 @@ import { Container, ID, Name, Username, Email } from './styles';
 
 const User = ({ id, name, username, email }) => {
   return (
-    <Container>
+    <Container aria-label="user">
       <ID aria-label="user-id">{id}</ID>
       <Name aria-label="user-name">{name}</Name>
       <Username aria-label="user-username">{username}</Username>
