@@ -19,19 +19,25 @@ const ToDoItem = ({ id, title, isDone }) => {
   }
 
   return (
-    <Container isDone={isDone}>
+    <Container aria-label="to-do" isDone={isDone}>
       <Title>{title}</Title>
       <Actions>
         <ActionButton
+          aria-label="handle-to-do"
           type="button"
           variant="green"
           isDone={isDone}
           onClick={() => toggleIsDone(id)}
         >
-          {isDone ? <FiRotateCw /> : <FiCheckCircle />}
+          {isDone ? (
+            <FiRotateCw aria-label="undone-to-do" />
+          ) : (
+            <FiCheckCircle aria-label="done-to-do" />
+          )}
         </ActionButton>
 
         <ActionButton
+          aria-label="remove-to-do"
           type="button"
           variant="red"
           onClick={() => handleRemoveToDo(id)}
