@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import { Container, Button } from './App.styles';
 
 const Users = React.lazy(() => import('./components/Users'));
-const ToDoList = React.lazy(() => import('./components/ToDoList'));
+const ToDoList = React.lazy(() => import('./features/ToDoList'));
 
 function App() {
   const [loadUsers, toggleLoadUsers] = useToggle();

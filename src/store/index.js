@@ -12,7 +12,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import todosReducer from './ToDos.store';
+import todosReducer from './../features/ToDoList/toDosSlice';
 
 const reducers = combineReducers({
   todos: todosReducer,

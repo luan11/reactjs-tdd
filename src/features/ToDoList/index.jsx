@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addToDo } from './../../store/ToDos.store';
+import { addToDo } from './toDosSlice';
 
-import ToDoItem from './../ToDoItem';
+import ToDoItem from './../../components/ToDoItem';
 
 import { Container, FormGroup, TextField, Button, ToDos } from './styles';
 

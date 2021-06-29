@@ -1,5 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { removeToDo, toggleDoneToDo } from './../../store/ToDos.store';
+import {
+  removeToDo,
+  toggleDoneToDo,
+} from './../../features/ToDoList/toDosSlice';
 
 import P from 'prop-types';
 
