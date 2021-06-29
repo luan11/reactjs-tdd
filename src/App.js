@@ -5,14 +5,15 @@ import useToggle from './hooks/useToggle';
 import Dropdown from './components/Dropdown';
 import Form from './components/Form';
 import ErrorBoundary from './components/ErrorBoundary';
-import ToDoList from './components/ToDoList';
 
 import { Container, Button } from './App.styles';
 
 const Users = React.lazy(() => import('./components/Users'));
+const ToDoList = React.lazy(() => import('./components/ToDoList'));
 
 function App() {
   const [loadUsers, toggleLoadUsers] = useToggle();
+  const [loadToDos, toggleLoadToDos] = useToggle();
 
   return (
     <Container>
@@ -27,7 +28,15 @@ function App() {
 
       <Form />
 
-      <ToDoList />
+      <Button type="button" onClick={() => toggleLoadToDos()}>
+        {loadToDos ? 'Unload' : 'Load'} To Dos
+      </Button>
+
+      {loadToDos && (
+        <React.Suspense fallback={<p>Loading...</p>}>
+          <ToDoList />
+        </React.Suspense>
+      )}
 
       <Button type="button" onClick={() => toggleLoadUsers()}>
         {loadUsers ? 'Unload' : 'Load'} users
