@@ -5,6 +5,7 @@ import useToggle from './hooks/useToggle';
 import Dropdown from './components/Dropdown';
 import Form from './components/Form';
 import ErrorBoundary from './components/ErrorBoundary';
+import ToDoList from './components/ToDoList';
 
 import { Container, Button } from './App.styles';
 
@@ -25,6 +26,8 @@ function App() {
       </Dropdown>
 
       <Form />
+
+      <ToDoList />
 
       <Button type="button" onClick={() => toggleLoadUsers()}>
         {loadUsers ? 'Unload' : 'Load'} users
