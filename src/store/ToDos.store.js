@@ -2,13 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const todos = createSlice({
   name: 'todos',
-  initialState: [
-    {
-      id: 1,
-      title: 'Learn about Redux',
-      isDone: false,
-    },
-  ],
+  initialState: [],
   reducers: {
     addToDo(state, action) {
       const lastId = state.length === 0 ? 0 : state[state.length - 1].id;
