@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   removeToDo,
@@ -58,4 +59,4 @@ ToDoItem.propTypes = {
   isDone: P.bool.isRequired,
 };
 
-export default ToDoItem;
+export default memo(ToDoItem);
